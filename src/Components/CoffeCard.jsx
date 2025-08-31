@@ -8,6 +8,7 @@ const CoffeCard = () => {
     const [coffe, setCoffe] = useState([]);
     const nav = useNavigate();
 
+
     useEffect( () => {
        if (category) {
          const coffeFilterByCategory = [...data].filter(coffe => coffe.category === category);
