@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100 shadow-sm md:py-7 md:px-20">
+        <div className="navbar backdrop-blur-xl fixed shadow-sm z-10 md:py-7 md:px-20">
 
             <div className="flex-1">
                 <Link className="text-2xl md:text-4xl font-bold" to="/">
@@ -30,18 +30,18 @@ const Navbar = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                     >
-                        <li><NavLink to="/">Home</NavLink></li>
-                        <li><NavLink to="/coffes">Coffes</NavLink></li>
-                        <li><NavLink to="/dashborad">Dashboard</NavLink></li>
+                        <li><NavLink className={({ isActive }) => `${isActive ? 'text-warning' : 'hover:text-warning'}`} to="/">Home</NavLink></li>
+                        <li><NavLink className={({ isActive }) => `${isActive ? 'text-warning' : 'hover:text-warning'}`} to="/coffes">Coffes</NavLink></li>
+                        <li><NavLink className={({ isActive }) => `${isActive ? 'text-warning' : 'hover:text-warning'}`} to="/dashborad">Dashboard</NavLink></li>
                     </ul>
                 </div>
 
 
                 <div className="hidden md:flex">
                     <ul className="menu menu-horizontal px-1 font-medium gap-5">
-                        <li><NavLink to="/">Home</NavLink></li>
-                        <li><NavLink to="/coffes">Coffes</NavLink></li>
-                        <li><NavLink to="/dashborad">Dashboard</NavLink></li>
+                        <li><NavLink className={({ isActive }) => `${isActive ? 'text-warning' : 'hover:text-warning'}`} to="/">Home</NavLink></li>
+                        <li><NavLink className={({ isActive }) => `${isActive ? 'text-warning' : 'hover:text-warning'}`} to="/coffes">Coffes</NavLink></li>
+                        <li><NavLink className={({ isActive }) => `${isActive ? 'text-warning' : 'hover:text-warning'}`} to="/dashborad">Dashboard</NavLink></li>
                     </ul>
                 </div>
             </div>
